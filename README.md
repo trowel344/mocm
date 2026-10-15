@@ -1,5 +1,12 @@
 # moeme — Mixture of Cut Modules (MoCM)
 
+> **Spiritual successor of [trowel344/moeme](https://github.com/trowel344/moeme).**
+> MoEMe asked whether a dense 27B can become sparse and measured why not;
+> MoCM is the architecture program that grew out of that answer — same goal
+> (make a dense model a MoE/MoCM), new codebase, new results. The two repos
+> are partners: feasibility evidence lives in MoEMe, the architecture lives
+> here.
+
 A dense model cut into routed modules, trained, emitted as standard GGUF,
 and served in a real engine — with every claim measured and committed.
 
