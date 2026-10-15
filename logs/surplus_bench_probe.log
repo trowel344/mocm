@@ -34,7 +34,7 @@ EXIT=1
 ### B: moe-cache, -ngl 99 (no explicit CPU-MoE split)  2026-10-11T23:38:36+01:00
 ggml_cuda_init: found 1 CUDA devices (Total VRAM: 7807 MiB):
   Device 0: NVIDIA GeForce RTX 4060 Laptop GPU, compute capability 8.9, VMM: yes, VRAM: 7807 MiB
-llama_bench: error: failed to load model '/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf'
+llama_bench: error: failed to load model '$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf'
 [
 EXIT=1
 

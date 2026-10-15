@@ -1,6 +1,6 @@
 surplus: memory cage 4G — the server cannot exceed it; the desktop stays safe
-surplus: backend: /home/cleanerbox/llama.cpp-upstream/build/bin/llama-server -m /home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf --host 127.0.0.1 --port 40577 --alias surplus --parallel 1 -ngl 42 -c 8192 -b 512 -ub 256 --threads 14 --threads-batch 16 --load-mode auto --fit on --fit-target 1473 --n-cpu-moe 36 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn auto --cache-reuse 256
-surplus: loading /home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf …
+surplus: backend: $HOME/llama.cpp-upstream/build/bin/llama-server -m $HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf --host 127.0.0.1 --port 40577 --alias surplus --parallel 1 -ngl 42 -c 8192 -b 512 -ub 256 --threads 14 --threads-batch 16 --load-mode auto --fit on --fit-target 1473 --n-cpu-moe 36 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn auto --cache-reuse 256
+surplus: loading $HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf …
 Running as unit: run-rd808ca3cf497484eb6164fbba9d04c3d.scope; invocation ID: ae00184cba444f159c6aaa8527ba4d49
 0.00.111.162 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
 0.00.205.905 W srv  llama_server: -----------------
@@ -8,7 +8,7 @@ Running as unit: run-rd808ca3cf497484eb6164fbba9d04c3d.scope; invocation ID: ae0
 0.00.205.910 W srv  llama_server: this can be a security risk (cross-origin attacks)
 0.00.205.910 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
 0.00.205.910 W srv  llama_server: -----------------
-0.00.207.694 I srv    load_model: loading model '/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf'
+0.00.207.694 I srv    load_model: loading model '$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf'
 0.01.281.001 W llama_model_loader: tensor overrides to CPU are used with mmap enabled - consider using --no-mmap for better performance
 0.01.449.234 W model has unused tensor blk.40.attn_norm.weight (size = 8192 bytes) -- ignoring
 0.01.449.241 W model has unused tensor blk.40.post_attention_norm.weight (size = 8192 bytes) -- ignoring

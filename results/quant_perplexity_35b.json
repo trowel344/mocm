@@ -32,7 +32,7 @@
   "threads": 6,
   "gpu_layers": 12,
   "cpu_moe": false,
-  "perplexity_binary": "/home/cleanerbox/.unsloth/llama.cpp/llama-perplexity",
+  "perplexity_binary": "$HOME/.unsloth/llama.cpp/llama-perplexity",
   "runs": {
     "q2_35b": {
       "ppl": 12.7113,
@@ -50,11 +50,11 @@
       "chunks_reported": 8,
       "final_estimate_line": "Final estimate: PPL = 12.7113 +/- 0.80933",
       "label": "q2_35b",
-      "model": "/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
+      "model": "$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
       "gguf_bytes": 13085779616,
       "exit_code": 0,
       "wall_s": 172.9535870260006,
-      "command": "/home/cleanerbox/.unsloth/llama.cpp/llama-perplexity -m /home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf -f results/ppl_corpus.txt -c 512 --chunks 8 -t 6 -ngl 12",
+      "command": "$HOME/.unsloth/llama.cpp/llama-perplexity -m $HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf -f results/ppl_corpus.txt -c 512 --chunks 8 -t 6 -ngl 12",
       "guard": "watched 57 sample(s) of pid 365993: min RAM available 9.47 GiB, peak VRAM 64 MiB, peak target RSS 11.32 GiB\nsamples: logs/ppl_q2_35b.watch.log",
       "guard_ended_it": false,
       "quant": "Q2_K"
@@ -66,11 +66,11 @@
       "chunks_reported": 0,
       "final_estimate_line": null,
       "label": "q4_35b",
-      "model": "/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q4_K_M.gguf",
+      "model": "$HOME/models/Ornith-1.5-35B-A3B-Q4_K_M.gguf",
       "gguf_bytes": 21864081056,
       "exit_code": -15,
       "wall_s": 66.61646547000055,
-      "command": "/home/cleanerbox/.unsloth/llama.cpp/llama-perplexity -m /home/cleanerbox/models/Ornith-1.5-35B-A3B-Q4_K_M.gguf -f results/ppl_corpus.txt -c 512 --chunks 8 -t 6 -ngl 12",
+      "command": "$HOME/.unsloth/llama.cpp/llama-perplexity -m $HOME/models/Ornith-1.5-35B-A3B-Q4_K_M.gguf -f results/ppl_corpus.txt -c 512 --chunks 8 -t 6 -ngl 12",
       "guard": "watched 13 sample(s) of pid 370926: min RAM available 0.11 GiB, peak VRAM 64 MiB, peak target RSS 12.23 GiB  -- GUARD TERMINATED THE TARGET\nsamples: logs/ppl_q4_35b.watch.log",
       "guard_ended_it": true,
       "quant": "Q4_K_M"

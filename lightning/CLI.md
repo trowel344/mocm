@@ -8,11 +8,10 @@ Catalog verified: A100, H100/H200, B200, L4, L40S, T4 all listed.
 ```bash
 export PATH="$HOME/.local/bin:$PATH"
 lightning login
-lightning user  # confirm identity / teamspace
+lightning user  # confirm identity / workspace
 ```
 
-Nothing below works until this is done, and nothing below spends anything
-until a Studio is *started* — creating is free, running bills.
+Nothing below works until this is done. Studios bill while started, not while created.
 
 ## Step 1 — start the right machine per job, stop when done
 
@@ -27,15 +26,14 @@ lightning studio start --name mocm-a100 --machine A100 --create
 lightning studio stop --name mocm-a100
 
 # 80GB gate (lightning/README.md month-one run): A100 is 40GB or 80GB
-# depending on teamspace allocation — check `nvidia-smi` inside the Studio
+# depending on workspace allocation — check `nvidia-smi` inside the Studio
 # first; if 40GB, run the 4-bit fallback command from the README.
 ```
 
 Cost hygiene (meters run while started, not while created):
 - `lightning studio list` shows what's running. Stopped studios keep disk.
-- `lightning studio stop` after EVERY session. Set a phone timer.
+- `lightning studio stop` after EVERY session.
 - `lightning studio delete` when a track is fully done.
-- Never leave a session attached overnight "to keep caches warm".
 
 ## Step 2 — inside the Studio (per fresh start)
 
@@ -60,9 +58,5 @@ keep `results/` syncing back the same way after each job.
 
 ## Quota/blackout notes
 
-- Free-tier GPU availability varies by hour; if A100 shows unavailable, run
-  the L4 track (always useful) and retry off-peak.
-- `--interruptible` (spot) is cheaper but can preempt mid-run: only use with
-  `--resume` jobs (all PoC drivers support it) and `--max-seconds` caps.
-- The £21.68/8h figure is paid credits stacked on free hours (13 h total):
-  confirm the current price in-teamspace before buying; run free hours first.
+Free-tier GPU availability varies — retry off-peak or run the L4 track.
+Spot instances can preempt mid-run: only use with `--resume` jobs and `--max-seconds` caps; confirm current pricing in-workspace before buying.

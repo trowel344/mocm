@@ -19,7 +19,7 @@ EXIT=139
 ### B: moe-cache -ngl 42 -ncmoe 24 --load-mode auto (reproduce surplus crash)  2026-10-11T23:39:59+01:00
 EXIT=1
 error: invalid parameter for argument: --load-mode
-usage: /home/cleanerbox/llama.cpp-moe-cache/build/bin/llama-bench [options]
+usage: $HOME/llama.cpp-moe-cache/build/bin/llama-bench [options]
 options:
   -h, --help
   --numa <distribute|isolate|numactl>         numa mode (default: disabled)
@@ -42,7 +42,7 @@ EXIT=0
     "cpu_info": "13th Gen Intel(R) Core(TM) i7-13620H",
     "gpu_info": "NVIDIA GeForce RTX 4060 Laptop GPU",
     "backends": "CUDA",
-    "model_filename": "/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
+    "model_filename": "$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
     "model_type": "qwen35moe 35B.A3B Q2_K - Medium",
     "model_size": 13074788864,
     "model_n_params": 35505251456,

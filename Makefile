@@ -16,8 +16,8 @@ EVAL_EXTRA  ?=
 # Engine comparison (`make eval-llama`): the SAME task set through llama.cpp at
 # an explicit expert placement, so an engine/placement change is measured for
 # correctness and not only for speed. Needs a llama-server build and the GGUF.
-LLAMA_SERVER ?= $(HOME)/llama.cpp-upstream/build/bin/llama-server
-LLAMA_GGUF   ?= $(HOME)/models/Ornith-1.5-35B-A3B-Q2_K.gguf
+LLAMA_SERVER ?= <path-to-llama-server>
+LLAMA_GGUF   ?= <path-to-model.gguf>
 LLAMA_PORT   ?= 8080
 # surplus's planner pick for this artifact (see results/moe_placement.json)
 LLAMA_PLACE  ?= -ngl 42 -ncmoe 24
@@ -31,7 +31,7 @@ SURPLUS      ?= surplus
 SHIM_PORT    ?= 11435
 # A checkout ROOT: surplus looks for <root>/build/bin/llama-server, and silently
 # falls back to its own pin if the path does not resolve.
-SURPLUS_ENGINE_DIR ?= $(HOME)/llama.cpp-upstream
+SURPLUS_ENGINE_DIR ?= <path-to-llama.cpp-checkout>
 # The same 19-task subset the ollama comparison used.
 SHORT19      ?= c_sum_evens,c_reverse_words,c_gcd,r_bat_ball,r_work_rate,r_lily,r_sequence,f_json_three_actions,f_json_tool_call,f_json_no_prose,f_json_nested,f_json_array,f_json_nulls,i_exact_three_bullets,i_only_word,i_uppercase,i_five_words,i_lowercase_start,i_no_letter_e
 LLAMA_EXTRA  ?= --tasks $(SHORT19) --num-predict 768
@@ -171,12 +171,9 @@ eval:
 		--out results/eval_$(subst :,-,$(MODEL)).json
 
 # How much a quantisation costs the model, on identical tokens. The gate is
-# pass/fail and cannot see this; perplexity can. Locally this runs on the
-# Ornith-1.5-35B-A3B pair, whose GGUFs are already in ~/models. Note that the
-# Q4_K_M file needs a partial offload here: keeping every expert on the CPU size
-# (-cmoe) makes a 21 GB model on a 15 GiB host get OOM-killed during load.
-QUANT_PPL_MODELS ?= q2_k=$$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf \
-	q4_k_m=$$HOME/models/Ornith-1.5-35B-A3B-Q4_K_M.gguf
+# pass/fail and cannot see this; perplexity can. Needs a partial offload to avoid OOM during load.
+QUANT_PPL_MODELS ?= q2_k=<path-to-Q2_K.gguf> \
+	q4_k_m=<path-to-Q4_K_M.gguf>
 quant-ppl:
 	$(PY_SYS) experiments/quant_perplexity.py \
 		$(foreach m,$(QUANT_PPL_MODELS),--model $(m)) \

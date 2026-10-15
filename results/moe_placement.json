@@ -1,7 +1,7 @@
 {
   "_comment": "Expert-placement measurements for the SAME weights the ollama tag runs: explicit --n-cpu-moe splits (what docs/expert_offloading.md's 'hot in VRAM, cold in RAM' question actually asks for) against the runtime default. Measured with llama-bench directly; surplus's own `bench` wrapper crashes on this model before it can measure anything (see the `surplus` block). Regenerate with the exact command recorded in engine.args.",
   "artifact": {
-    "path": "/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
+    "path": "$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
     "ollama_tag": "ornith-1.5-35b-a3b:q2_k",
     "arch": "qwen35moe",
     "quant": "Q2_K",
@@ -14,7 +14,7 @@
   },
   "engine": {
     "build": "llama.cpp upstream, build_commit 5d9e5ac, build_number 91, CUDA backend",
-    "binary": "/home/cleanerbox/llama.cpp-upstream/build/bin/llama-bench",
+    "binary": "$HOME/llama.cpp-upstream/build/bin/llama-bench",
     "args": "-m <gguf> -p 128 -n 64 -r 2 -t 14 -b 512 -ub 256 -fa on -ctk q8_0 -ctv q8_0 -o json <placement flags>",
     "note": "Placement flags were varied; everything else was held fixed."
   },
@@ -35,7 +35,7 @@
           "cpu_info": "13th Gen Intel(R) Core(TM) i7-13620H",
           "gpu_info": "NVIDIA GeForce RTX 4060 Laptop GPU",
           "backends": "CUDA",
-          "model_filename": "/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
+          "model_filename": "$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
           "model_type": "qwen35moe 35B.A3B Q2_K - Medium",
           "model_size": 13074788864,
           "model_n_params": 35505251456,
@@ -85,7 +85,7 @@
           "cpu_info": "13th Gen Intel(R) Core(TM) i7-13620H",
           "gpu_info": "NVIDIA GeForce RTX 4060 Laptop GPU",
           "backends": "CUDA",
-          "model_filename": "/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
+          "model_filename": "$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
           "model_type": "qwen35moe 35B.A3B Q2_K - Medium",
           "model_size": 13074788864,
           "model_n_params": 35505251456,
@@ -147,7 +147,7 @@
           "cpu_info": "13th Gen Intel(R) Core(TM) i7-13620H",
           "gpu_info": "NVIDIA GeForce RTX 4060 Laptop GPU",
           "backends": "CUDA",
-          "model_filename": "/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
+          "model_filename": "$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
           "model_type": "qwen35moe 35B.A3B Q2_K - Medium",
           "model_size": 13074788864,
           "model_n_params": 35505251456,
@@ -197,7 +197,7 @@
           "cpu_info": "13th Gen Intel(R) Core(TM) i7-13620H",
           "gpu_info": "NVIDIA GeForce RTX 4060 Laptop GPU",
           "backends": "CUDA",
-          "model_filename": "/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
+          "model_filename": "$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
           "model_type": "qwen35moe 35B.A3B Q2_K - Medium",
           "model_size": 13074788864,
           "model_n_params": 35505251456,
@@ -259,7 +259,7 @@
           "cpu_info": "13th Gen Intel(R) Core(TM) i7-13620H",
           "gpu_info": "NVIDIA GeForce RTX 4060 Laptop GPU",
           "backends": "CUDA",
-          "model_filename": "/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
+          "model_filename": "$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
           "model_type": "qwen35moe 35B.A3B Q2_K - Medium",
           "model_size": 13074788864,
           "model_n_params": 35505251456,
@@ -309,7 +309,7 @@
           "cpu_info": "13th Gen Intel(R) Core(TM) i7-13620H",
           "gpu_info": "NVIDIA GeForce RTX 4060 Laptop GPU",
           "backends": "CUDA",
-          "model_filename": "/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
+          "model_filename": "$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
           "model_type": "qwen35moe 35B.A3B Q2_K - Medium",
           "model_size": 13074788864,
           "model_n_params": 35505251456,
@@ -372,7 +372,7 @@
     ]
   },
   "surplus": {
-    "binary": "/home/cleanerbox/.cargo/bin/surplus 0.1.0+srcee90bde0",
+    "binary": "$HOME/.cargo/bin/surplus 0.1.0+srcee90bde0",
     "planner_prediction_decode_tok_s": 61.52,
     "planner_plan": {
       "gpu_layers": "42",

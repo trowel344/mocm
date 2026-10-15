@@ -34,11 +34,11 @@ tar -czf moeme-repo.tar.gz --exclude='./.git' --exclude='./.venv' \
 
 # 2. push and run
 kaggle kernels push -p kaggle/
-kaggle kernels status trowel3444/moeme-upcycling-poc
-kaggle kernels logs   trowel3444/moeme-upcycling-poc        # or view on the web
+kaggle kernels status <kernel-id>
+kaggle kernels logs   <kernel-id>        # or view on the web
 
 # 3. collect
-kaggle kernels output trowel3444/moeme-upcycling-poc -p out/
+kaggle kernels output <kernel-id> -p out/
 ```
 
 `kernel-metadata.json` in this directory carries the settings that matter:
@@ -118,16 +118,7 @@ time. Worth repeating whenever the environment changes:
 
 ## Constraints the driver is built around
 
-| Constraint | How it is handled |
-|---|---|
-| unknown device speed | `--max-seconds` caps each configuration's training loop and the report is still written; `stopped_early` and `steps_completed` record any truncation |
-| a configuration that raises | recorded as an `error` entry in the report, remaining configurations still run, process exits non-zero |
-| ~12 h session cap | configurations run in the order given, and the JSON is rewritten after every one |
-| ~20 GB output cap | `--save-every 0` in the run cells: a checkpoint at E=64 over 24 layers is ~1.6 GB, and several of them would consume the cap. Re-enable only if `--resume` is needed |
-| T4 bf16 is emulated, not tensor-core | measured `bf16 True` on this image and the run used it; `pick_amp_dtype` falls back to fp16 + `GradScaler` if a device reports no bf16 |
-| 2x T4 has no NVLink | the PoC is a single-GPU job; multi-GPU buys nothing at this scale |
-| idle timeout | the training loop prints a loss and elapsed-time line at least every 25 steps |
-| a silent corpus fallback | the corpus source is recorded in the report, and a built-in-corpus run prints an explicit warning, because perplexities from a repeated 1 kB text look finite but mean nothing |
+See current Kaggle quotas for session length, output, and device limits.
 
 > Kaggle free-tier quotas (hours per week, session length) are not verified here.
 

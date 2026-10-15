@@ -345,7 +345,7 @@
   "num_predict": 768,
   "engine": {
     "kind": "llama.cpp llama-server",
-    "model_path": "/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
+    "model_path": "$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf",
     "placement_flags": "-ngl 42 -ncmoe 24",
     "ctx": 4096,
     "threads": 14,

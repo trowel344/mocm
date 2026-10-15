@@ -1,6 +1,6 @@
 # Lightning AI track: the one 27B experiment per month
 
-Free tier (as reported): ~5 h/month A100-80GB + ~10 h/month A100-40GB.
+Free tier (as reported): a few monthly free-tier A100 hours (allocation varies — check current quota).
 That buys exactly ONE well-designed run. This file designs it so the hours
 are not wasted.
 
@@ -41,8 +41,8 @@ all-8-late-layers or E=32 cell if E8 wins and hours remain).
 
 ## Cost control
 
-- Dry-run `--self-test` first (offline, seconds) — it caught a device bug
-  that would have burned a GPU session once already.
+- Dry-run `--self-test` first (offline, seconds) before spending GPU time.
+- Paid credits can stack on free hours; validate on free hours first.
 - `--max-seconds 12600` caps training per config (3.5 h) so a slow device
   returns evidence, not a killed session.
 - Checkpoints resume (`--resume`); results write after every config.

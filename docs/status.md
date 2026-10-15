@@ -5,17 +5,14 @@ measured, what has been ruled out, and what is still unknown — and it does not
 ask you to choose between anything. Every number is checked against the artifact
 named beside it.
 
-The other documents in `docs/` are longer and, read in sequence, are confusing:
-`solution_space.md` is a menu of untested routes, `decision_memo.md` is a dated
-set of three paths, `experiment_log.md` is a running diary. This is the one-page
-summary they add up to.
+Doc map: `solution_space.md` (route survey), `decision_memo.md` (dated recommendation), `experiment_log.md` (experiment diary) — this page is the one-page summary they add up to.
 
 ---
 
 ## The goal, and what actually happened to it
 
 The goal was to make **Qwen3.8-27B** — a 27.8B *dense* model — run usefully on
-this laptop (3.8 GiB usable VRAM + 10.2 GB usable RAM, £0 budget). The plan was
+this laptop (3.8 GiB usable VRAM + 10.2 GB usable RAM, no paid compute). The plan was
 to convert it into a mixture-of-experts so a token would read only part of the
 model.
 
@@ -139,8 +136,8 @@ comes from*, never *which bytes are needed*. A dense layer has no cold subset, s
 17.0 GB still crosses into compute every token.
 → `docs/expert_offloading.md`
 
-**Full upcycling on this budget.** It costs 10⁴–10⁵ GPU-hours. A free tier is
-~30 GPU-hours/week and the budget is £20. That is off by orders of magnitude, not
+**Full upcycling on this budget.** It costs 10⁴–10⁵ GPU-hours, far beyond
+free-tier and hobby budgets. That is off by orders of magnitude, not
 by a factor you can schedule around.
 → `docs/prior_work.md` §1
 
@@ -207,6 +204,4 @@ repo's 19-task set and answers every reasoning task identically — while decodi
 19 times faster.
 
 So the project's own goal has been achieved. It was achieved by a different means
-than the project set out to use, and the documents that proposed the original
-means are still on disk saying so, which is why reading them in order is
-disorienting.
+than the project set out to use. The earlier documents remain on disk as provenance.

@@ -1,7 +1,7 @@
 surplus: memory cage 4G — the server cannot exceed it; the desktop stays safe
-surplus: pinned engine /home/cleanerbox/llama.cpp-upstream/build has no llama-server — ignoring the pin
-surplus: backend: /home/cleanerbox/llama.cpp-moe-cache/build/bin/llama-server -m /home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf --host 127.0.0.1 --port 33171 --alias surplus --parallel 1 -ngl 42 -c 8192 -b 512 -ub 256 --threads 14 --threads-batch 16 --mmap --fit on --fit-target 1473 --n-cpu-moe 24 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn auto --cache-reuse 256
-surplus: loading /home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf …
+surplus: pinned engine $HOME/llama.cpp-upstream/build has no llama-server — ignoring the pin
+surplus: backend: $HOME/llama.cpp-moe-cache/build/bin/llama-server -m $HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf --host 127.0.0.1 --port 33171 --alias surplus --parallel 1 -ngl 42 -c 8192 -b 512 -ub 256 --threads 14 --threads-batch 16 --mmap --fit on --fit-target 1473 --n-cpu-moe 24 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn auto --cache-reuse 256
+surplus: loading $HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf …
 Running as unit: run-r5237f25024d44ecea455c0eb96b110c3.scope; invocation ID: 91bc63de355f428e87f23b3e908c3912
 0.00.105.880 I log_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
 0.00.105.882 I device_info:
@@ -12,7 +12,7 @@ Running as unit: run-r5237f25024d44ecea455c0eb96b110c3.scope; invocation ID: 91b
 0.00.248.293 I srv          init: using 15 threads for HTTP server
 0.00.248.685 I srv         start: binding port with default address family
 0.00.249.806 I srv  llama_server: loading model
-0.00.249.809 I srv    load_model: loading model '/home/cleanerbox/models/Ornith-1.5-35B-A3B-Q2_K.gguf'
+0.00.249.809 I srv    load_model: loading model '$HOME/models/Ornith-1.5-35B-A3B-Q2_K.gguf'
 0.00.249.920 I common_init_result: fitting params to device memory ...
 0.00.249.921 I common_init_result: (for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on)
 0.01.270.364 W common_fit_params: failed to fit params to free device memory: n_gpu_layers already set by user to 42, abort

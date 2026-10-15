@@ -1,4 +1,5 @@
 # Decision Memo
+> Superseded by docs/status.md — kept for provenance.
 
 **Date:** 2026-10-10 · **Hardware:** RTX 4060 Laptop 8 GB / i7-13620H / 15.4 GiB /
 Micron 3400 1 TB NVMe, Ubuntu 24.04.4

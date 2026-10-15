@@ -47,11 +47,12 @@ The project started as an edge-sparsity feasibility study for Qwen3.8-27B
   tokenizer included) that loads in llama.cpp and surplus native alike.
   Dense-exact validation reproduces dense output token-for-token; the trained
   MoCM-4B (`MoCM-Qwen3-4B-E8K1-F16`) answers Paris identically to dense and
-  holds fluent text over 12 tokens where dense itself veers.
+  holds fluent text over 12 tokens where dense itself veers, on the recorded
+  prompts (results/mocm_4B.json).
 - **Resident 27B** (`results/eval_qwen38-q3xl_short19_768.json`): Qwen3.8-27B
-  at Q3_K_XL runs resident at 2.35 tok/s decode (4.2x Q4), reasoning and
-  coding perfect on the gate; instruction rows show the known think-leakage
-  harness artifact.
+  at Q3_K_XL runs resident at 2.35 tok/s decode (4.2x Q4), 4/4 reasoning +
+  3/3 coding on the 19-task gate subset (results/eval_qwen38-q3xl_short19_768.json);
+  instruction rows show the known think-leakage harness artifact.
 
 ## Repository layout
 

@@ -15,3 +15,5 @@ models/
 # results ARE committed: they are the evidence this project produces.
 # Only scratch/tmp outputs are ignored.
 results/*.tmp
+
+*.pid

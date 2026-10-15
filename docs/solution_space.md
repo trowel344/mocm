@@ -1,4 +1,5 @@
 # The solution space: every route to a fast, near-27B-quality model on 14.28 GB
+> Superseded by docs/status.md — kept for provenance.
 
 This is a survey, not a result. It exists because the repo has accumulated a lot
 of *closed* findings and a few *unrun* ones, and the difference was getting hard

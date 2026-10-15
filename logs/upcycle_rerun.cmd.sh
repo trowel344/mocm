@@ -3,7 +3,7 @@
 # predates that field). Writes its own PID so the guard cannot be aimed at a
 # wrapper, saves no checkpoints (does not touch .cache/moe/poc_ckpt), and writes
 # to a NEW out file so the original results/upcycle_poc.json is preserved.
-cd /home/cleanerbox/Documents/moeme || exit 1
+cd $HOME/Documents/moeme || exit 1
 echo $$ > logs/upcycle_rerun.pid
 exec python3 experiments/upcycle_poc.py \
   --model Qwen/Qwen3.5-0.8B \

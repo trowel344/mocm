@@ -1,7 +1,7 @@
 {
   "_comment": "Memory-tier constants measured on the target machine. Every value here was produced by tools/bench_hardware.py and tools/bench_inference.py, not copied from a datasheet. Regenerate with `make doctor` / `make bench-inference`.",
   "machine": {
-    "hostname": "cleanerbox-Stealth-15",
+    "hostname": "gpu-laptop",
     "os": "Ubuntu 24.04.4 LTS",
     "cpu": "13th Gen Intel(R) Core(TM) i7-13620H (10c/16t)",
     "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",

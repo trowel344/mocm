@@ -4,8 +4,7 @@ Every experiment actually executed during this study, in order, with the command
 used and the raw outcome. Numbers here are the source for the reports; if a
 figure is quoted in `docs/`, it should trace to a line in this file.
 
-**Environment:** `cleanerbox-Stealth-15`, Ubuntu 24.04.4, i7-13620H (10c/16t),
-RTX 4060 Laptop 8188 MiB, 15.4 GiB RAM, Micron 3400 1 TB NVMe.
+**Environment:** RTX 4060 Laptop 8 GB / ~16 GB RAM / NVMe, Ubuntu 24.04.
 **Session date:** 2026-10-10. **Spend:** £0.00. **Cloud compute used:** none.
 
 ---
@@ -333,7 +332,7 @@ python3 experiments/upcycle_poc.py --model Qwen/Qwen3.5-0.8B \
   --grad-accum 4 --corpus-chars 4000000 --out results/upcycle_poc.json
 ```
 
-Ran on the local RTX 4060 (7800 MiB free after stopping an idle ollama model),
+Ran on the local RTX 4060,
 real `qwen3_5_text` architecture, 4M characters of streamed `fineweb-edu`
 (883,186 tokens; 1638 train / 86 val blocks of 512). 300 steps ~= 180 s per
 configuration. Only the four upcycled layers train (44.1M params).

@@ -1,6 +1,6 @@
 {
   "inventory": {
-    "hostname": "cleanerbox-Stealth-15",
+    "hostname": "gpu-laptop",
     "cpu_model": "13th Gen Intel(R) Core(TM) i7-13620H",
     "cpu_logical": 16,
     "kernel": "7.0.0-34-generic",

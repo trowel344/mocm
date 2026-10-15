@@ -6,8 +6,7 @@ frozen probes, longer stage-3 runs, BTX at scale) goes here or to Kaggle.
 ## Colab (interactive, this track)
 
 Best for: 2B distill/MoCM verification, 9B frozen probes, longer single runs
-with inspection. Free tier: T4-class GPU, ~12GB RAM (high-RAM setting helps
-the 9B frozen probe), 12 h sessions, opaque weekly quota, ephemeral disk.
+with inspection. Free tier: free-tier Colab GPU (limits change — check current docs), ephemeral disk.
 
 1. One-time setup: accept the Qwen license on Hugging Face, store an access
    token in Colab Secrets as `HF_TOKEN`.
@@ -20,8 +19,7 @@ the 9B frozen probe), 12 h sessions, opaque weekly quota, ephemeral disk.
 
 ## Kaggle (batch, existing track)
 
-Best for: scheduled unattended runs with transparent-ish quota (30 GPU-h/week,
-2xT4, 30GB RAM, 9 h sessions). See `kaggle/README.md`. E15 ran there.
+Best for: scheduled unattended runs (see current Kaggle quotas). See `kaggle/README.md`. E15 ran there.
 
 ## Neither trains 27B
 
