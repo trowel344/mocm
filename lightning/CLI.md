@@ -3,7 +3,7 @@
 CLI installed (`pip install lightning-sdk`, binary at `~/.local/bin/lightning`).
 Catalog verified: A100, H100/H200, B200, L4, L40S, T4 all listed.
 
-## Step 0 — you do this (interactive browser login, 1 min)
+## Step 0 — authentication (interactive browser login, 1 min)
 
 ```bash
 export PATH="$HOME/.local/bin:$PATH"

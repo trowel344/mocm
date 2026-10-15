@@ -2,7 +2,7 @@
 
 As of 2026-10-13. This page is a verdict, not a survey. It says what has been
 measured, what has been ruled out, and what is still unknown — and it does not
-ask you to choose between anything. Every number is checked against the artifact
+ask the reader to choose between anything. Every number is checked against the artifact
 named beside it.
 
 Doc map: `solution_space.md` (route survey), `decision_memo.md` (dated recommendation), `experiment_log.md` (experiment diary) — this page is the one-page summary they add up to.
@@ -24,7 +24,7 @@ Two things are now true, and they point in opposite directions.
   not by converting this one. It is measured and committed.
 
 The short version: the project spent its effort trying to give a dense model a
-sparse FFN, and the answer is that you cannot retrofit that. You can, however,
+sparse FFN: no FFN-only change can retrofit that. A sparse model trained from scratch can, however,
 rent one. That is the whole story.
 
 ---
@@ -138,7 +138,7 @@ comes from*, never *which bytes are needed*. A dense layer has no cold subset, s
 
 **Full upcycling on this budget.** It costs 10⁴–10⁵ GPU-hours, far beyond
 free-tier and hobby budgets. That is off by orders of magnitude, not
-by a factor you can schedule around.
+by a factor schedulable around.
 → `docs/prior_work.md` §1
 
 **Training a new ~9B-active model from scratch.** Pretraining scale. Not

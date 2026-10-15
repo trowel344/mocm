@@ -129,8 +129,8 @@ makes the frozen residual worse (0.9249 -> 2.4461) and the trained model much wo
 (29.35x dense against 4.15x). `E/k` is the right correction for *replicated* experts,
 which is not what §2 builds.
 
-This is a real design risk, not a footnote. Three mitigations, in the order I
-would try them:
+This is a real design risk, not a footnote. Three mitigations, in order of
+expected value:
 
 1. **Scale expert init by `E/k`**, so the sparse sum starts at the right
    magnitude. Cheap to test; may be unstable for large E/k. **Tested (E21) and it
